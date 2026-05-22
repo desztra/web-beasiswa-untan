@@ -1,0 +1,200 @@
+{
+  "source": "https://www.schoters.com/id/beasiswa",
+  "title": "Kalender Beasiswa - Schoters",
+  "description": "Kalender dan informasi beasiswa terlengkap dari semua jenjang S1, S2, & S3 di setiap negara dan kampus impian beserta persyaratan dan proses pendaftarannya",
+  "filters": {
+    "jenjang": [
+      { "level": "D2", "count": 2 },
+      { "level": "D3", "count": 6 },
+      { "level": "Non-Degree", "count": 20 },
+      { "level": "S1", "count": 648 },
+      { "level": "S2", "count": 683 },
+      { "level": "S3", "count": 362 }
+    ],
+    "tipe_pendanaan": [
+      { "type": "Fully Funded", "count": 809 },
+      { "type": "Partially Funded", "count": 590 }
+    ],
+    "tipe_beasiswa": [
+      { "type": "Company/Institution Scholarship", "count": 237 },
+      { "type": "Government Scholarship", "count": 459 },
+      { "type": "University Scholarship", "count": 830 }
+    ],
+    "negara": [
+      { "country": "Australia", "count": 161 },
+      { "country": "Austria", "count": 19 },
+      { "country": "Azerbaijan", "count": 6 },
+      { "country": "Belgium", "count": 38 },
+      { "country": "Brazil", "count": 2 },
+      { "country": "Brunei", "count": 5 },
+      { "country": "Canada", "count": 46 },
+      { "country": "China", "count": 114 },
+      { "country": "Czech Republic", "count": 2 },
+      { "country": "Denmark", "count": 13 },
+      { "country": "Egypt", "count": 3 },
+      { "country": "Estonia", "count": 2 },
+      { "country": "Finland", "count": 11 },
+      { "country": "France", "count": 20 },
+      { "country": "Germany", "count": 46 },
+      { "country": "Hong Kong", "count": 24 },
+      { "country": "Hungary", "count": 5 },
+      { "country": "India", "count": 2 },
+      { "country": "Indonesia", "count": 35 },
+      { "country": "Ireland", "count": 8 },
+      { "country": "Italy", "count": 19 },
+      { "country": "Japan", "count": 254 },
+      { "country": "Kazakhstan", "count": 3 },
+      { "country": "Latvia", "count": 3 },
+      { "country": "Libya", "count": 2 },
+      { "country": "Luxembourg", "count": 1 },
+      { "country": "Macau", "count": 6 },
+      { "country": "Malaysia", "count": 12 },
+      { "country": "Morocco", "count": 2 },
+      { "country": "Netherlands", "count": 21 },
+      { "country": "New Zealand", "count": 22 },
+      { "country": "Pakistan", "count": 1 },
+      { "country": "Philippines", "count": 2 },
+      { "country": "Poland", "count": 9 },
+      { "country": "Portugal", "count": 4 },
+      { "country": "Qatar", "count": 6 },
+      { "country": "Romania", "count": 9 },
+      { "country": "Russia", "count": 6 },
+      { "country": "Saudi Arabia", "count": 12 },
+      { "country": "Scotland", "count": 2 },
+      { "country": "Serbia", "count": 3 },
+      { "country": "Singapore", "count": 49 },
+      { "country": "Slovakia", "count": 1 },
+      { "country": "South Korea", "count": 109 },
+      { "country": "Spain", "count": 12 },
+      { "country": "Sweden", "count": 11 },
+      { "country": "Switzerland", "count": 19 },
+      { "country": "Taiwan", "count": 112 },
+      { "country": "Thailand", "count": 38 },
+      { "country": "Turkey", "count": 11 },
+      { "country": "United Arab Emirates", "count": 67 },
+      { "country": "United Kingdom", "count": 76 },
+      { "country": "United States", "count": 55 },
+      { "country": "Universal", "count": 2 },
+      { "country": "Vietnam", "count": 2 }
+    ]
+  },
+  "scholarships_page_1": [
+    {
+      "name": "Boustany Foundation Scholarship, MBA - Harvard University",
+      "funding_type": "Partially Funded",
+      "level": ["S2"],
+      "country": "United States",
+      "open_date": "2026-05-21",
+      "deadline": "2027-05-31",
+      "status": "Pendaftaran dibuka",
+      "url": "https://www.schoters.com/id/beasiswa/boustany-foundation-scholarship-mba-harvard-university-1"
+    },
+    {
+      "name": "La Trobe University - La Trobe High Achiever Scholarship",
+      "funding_type": "Partially Funded",
+      "level": ["S1"],
+      "country": "Australia",
+      "open_date": "2023-09-29",
+      "deadline": "2026-12-31",
+      "status": "Pendaftaran dibuka",
+      "url": "https://www.schoters.com/id/beasiswa/la-trobe-university-la-trobe-high-achiever-scholarship-2"
+    },
+    {
+      "name": "Charles Sturt University - International Student Support Scholarship",
+      "funding_type": "Partially Funded",
+      "level": ["S1"],
+      "country": "Australia",
+      "open_date": "2026-05-21",
+      "deadline": "2026-12-31",
+      "status": "Pendaftaran dibuka",
+      "url": "https://www.schoters.com/id/beasiswa/charles-sturt-university-international-student-support-scholarship-3"
+    },
+    {
+      "name": "La Trobe University - La Trobe High Achiever Scholarship",
+      "funding_type": "Partially Funded",
+      "level": ["S2"],
+      "country": "Australia",
+      "open_date": "2023-09-29",
+      "deadline": "2026-12-31",
+      "status": "Pendaftaran dibuka",
+      "url": "https://www.schoters.com/id/beasiswa/la-trobe-university-la-trobe-high-achiever-scholarship-4"
+    },
+    {
+      "name": "ETH Zurich - Excellence Scholarship & Opportunity Programme (ESOP)",
+      "funding_type": "Fully Funded",
+      "level": ["S2"],
+      "country": "Switzerland",
+      "open_date": "2026-11-01",
+      "deadline": "2026-11-30",
+      "status": "Pendaftaran dibuka",
+      "url": "https://www.schoters.com/id/beasiswa/eth-zurich-excellence-scholarship-opportunity-programme-esop-5"
+    },
+    {
+      "name": "Southern Taiwan University of Science and Technology - The STUST Scholarship for International Students",
+      "funding_type": "Fully Funded",
+      "level": ["S3"],
+      "country": "Taiwan",
+      "open_date": "2026-09-15",
+      "deadline": "2026-11-30",
+      "status": "Pendaftaran dibuka",
+      "url": "https://www.schoters.com/id/beasiswa/southern-taiwan-university-of-science-and-technology-the-stust-scholarship-for-international-students-6"
+    },
+    {
+      "name": "Southern Taiwan University of Science and Technology - The STUST Scholarship for International Students",
+      "funding_type": "Partially Funded",
+      "level": ["S2"],
+      "country": "Taiwan",
+      "open_date": "2026-09-15",
+      "deadline": "2026-11-30",
+      "status": "Pendaftaran dibuka",
+      "url": "https://www.schoters.com/id/beasiswa/southern-taiwan-university-of-science-and-technology-the-stust-scholarship-for-international-students-7"
+    },
+    {
+      "name": "University of Melbourne - Melbourne International Undergraduate Scholarship",
+      "funding_type": "Partially Funded",
+      "level": ["S1"],
+      "country": "Australia",
+      "open_date": "2026-05-21",
+      "deadline": "2026-10-31",
+      "status": "Pendaftaran dibuka",
+      "url": "https://www.schoters.com/id/beasiswa/university-of-melbourne-melbourne-international-undergraduate-scholarship-8"
+    },
+    {
+      "name": "Charles Darwin University - CDU Global Merit Scholarship",
+      "funding_type": "Partially Funded",
+      "level": ["S1"],
+      "country": "Australia",
+      "open_date": "2026-05-21",
+      "deadline": "2026-10-09",
+      "status": "Pendaftaran dibuka",
+      "url": "https://www.schoters.com/id/beasiswa/charles-darwin-university-cdu-global-merit-scholarship-9"
+    },
+    {
+      "name": "Deakin University - Vice-Chancellor's International Scholarship",
+      "funding_type": "Partially Funded",
+      "level": ["S1", "S2"],
+      "country": "Australia",
+      "open_date": "2026-05-21",
+      "deadline": "2026-09-25",
+      "status": "Pendaftaran dibuka",
+      "url": "https://www.schoters.com/id/beasiswa/deakin-university-vice-chancellor-s-international-scholarship-10"
+    }
+  ],
+  "pagination": {
+    "current_page": 1,
+    "total_pages": 153
+  },
+  "contact": {
+    "email": "ask@schoters.com",
+    "phone": "0811 9424 966",
+    "address": "Gedung Sinarmas MSIG Tower Lt. 33, Jl. Jenderal Sudirman Kav. 21, Karet Kuningan, Setiabudi, Jakarta Selatan, Jakarta 12920"
+  },
+  "social_media": {
+    "instagram": "https://www.instagram.com/schoters/",
+    "facebook": "https://www.facebook.com/schoters",
+    "youtube": "https://www.youtube.com/@Schoters",
+    "tiktok": "https://www.tiktok.com/@schoters.id",
+    "twitter_x": "https://x.com/schoters_com",
+    "linkedin": "https://id.linkedin.com/company/schoters"
+  }
+}

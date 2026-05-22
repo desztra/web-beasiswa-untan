@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO -->
+  <title>Beasiswa Studi & Penelitian — Informatika Universitas Tanjungpura</title>
+  <meta name="description" content="Temukan informasi beasiswa terlengkap untuk mahasiswa Informatika Universitas Tanjungpura. Beasiswa studi, penelitian, magang dari sumber resmi pemerintah dan swasta." />
+  <meta name="keywords" content="beasiswa, informatika, UNTAN, Tanjungpura, KIP, LPDP, Pertamina, Pelindo, beasiswa 2026" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Beasiswa Informatika UNTAN" />
+  <meta property="og:description" content="Portal informasi beasiswa Program Studi Informatika Universitas Tanjungpura." />
+  <meta property="og:type" content="website" />
+
+  <!-- System Fonts diprioritaskan, Roboto Condensed untuk heading (sebagai font-serif) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome 6 -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+
+  <!-- AOS.js -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+  <!-- Swiper.js -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+  />
+
+  <!-- Tailwind CSS (CDN) -->
+  <script>
+    // Tailwind config harus sebelum CDN dimuat
+    window.tailwind = window.tailwind || {};
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary:   '#003150',
+            secondary: '#feb404',
+          },
+        },
+      },
+      corePlugins: { preflight: false }, // gunakan CSS kita sendiri untuk reset
+    };
+  </script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body class="font-sans">
+
+  <!-- ================================================
+       STICKY NAVBAR
+       ================================================ -->
+  <header id="navbar" role="banner">
+
+    <!-- ── TOP UTILITY BAR (putih) ── -->
+    <div class="navbar-top">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex items-center justify-between h-full">
+
+        <!-- Logo UNTAN + Informatika -->
+        <a href="#hero" class="flex items-center gap-3 no-underline" aria-label="Beranda Informatika UNTAN">
+          <!-- Lambang UNTAN (SVG inline) -->
+          <div class="navbar-logo-emblem">
+            <img src="assets/images/logo/logo-untan.png" alt="Logo UNTAN" class="w-11 h-11 object-contain">
+          </div>
+          <div class="leading-tight">
+            <div class="navbar-logo-name">INFORMATIKA</div>
+            <div class="navbar-logo-sub">UNIVERSITAS TANJUNGPURA</div>
+          </div>
+        </a>
+
+        <!-- Right: SATU UNTAN + Language + Icons -->
+        <div class="flex items-center gap-4">
+          <!-- SATU UNTAN label -->
+          <span class="navbar-satu hidden sm:block">SATU UNTAN</span>
+          <div class="w-px h-5 bg-gray-300 hidden sm:block"></div>
+
+          <!-- Language Toggle (UC-08) -->
+          <div id="lang-toggle" role="group" aria-label="Pilih bahasa">
+            <button id="btn-id" class="lang-btn active" data-lang="id" onclick="setLanguage('id')" aria-label="Bahasa Indonesia">ID</button>
+            <span class="lang-divider">|</span>
+            <button id="btn-en" class="lang-btn" data-lang="en" onclick="setLanguage('en')" aria-label="English">EN</button>
+          </div>
+
+          <!-- Contrast icon -->
+          <button class="navbar-search-btn" aria-label="Mode Gelap/Terang">
+            <i class="fas fa-circle-half-stroke text-sm"></i>
+          </button>
+
+          <!-- Search icon -->
+          <button class="navbar-search-btn" aria-label="Cari">
+            <i class="fas fa-search text-sm"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── MAIN NAV BAR (kuning, links CENTERED) ── -->
+    <nav class="navbar-main" aria-label="Navigasi utama">
+
+      <!-- Desktop: links centered across full width -->
+      <div class="hidden lg:flex items-center justify-center h-full w-full" id="nav-links" role="list">
+        <a href="#hero"        class="nav-link h-full flex items-center gap-1.5 px-5 text-xs font-semibold" role="listitem"><span data-i18n="nav.tentang">TENTANG KAMI</span> <i class="fas fa-chevron-down" style="font-size:8px;"></i></a>
+        <a href="#directory"   class="nav-link h-full flex items-center gap-1.5 px-5 text-xs font-semibold" role="listitem"><span data-i18n="nav.program">PROGRAM</span> <i class="fas fa-chevron-down" style="font-size:8px;"></i></a>
+        <a href="#hero"        class="nav-link h-full flex items-center gap-1.5 px-5 text-xs font-semibold" role="listitem"><span data-i18n="nav.sdm">SDM</span> <i class="fas fa-chevron-down" style="font-size:8px;"></i></a>
+        <a href="#hero"        class="nav-link h-full flex items-center gap-1.5 px-5 text-xs font-semibold" role="listitem"><span data-i18n="nav.fasilitas">FASILITAS</span> <i class="fas fa-chevron-down" style="font-size:8px;"></i></a>
+        <a href="#hero"        class="nav-link h-full flex items-center gap-1.5 px-5 text-xs font-semibold" role="listitem"><span data-i18n="nav.agenda">KARYA &amp; AGENDA</span> <i class="fas fa-chevron-down" style="font-size:8px;"></i></a>
+        <a href="#cta"         class="nav-link h-full flex items-center gap-1.5 px-5 text-xs font-semibold" role="listitem"><span data-i18n="nav.kontak">KONTAK</span> <i class="fas fa-chevron-down" style="font-size:8px;"></i></a>
+      </div>
+
+      <!-- Mobile: hamburger only -->
+      <div class="lg:hidden max-w-7xl mx-auto px-4 w-full flex items-center justify-between h-full">
+        <span class="text-primary font-bold text-sm">MENU</span>
+        <button
+          id="hamburger"
+          class="p-2 rounded-md transition-colors"
+          style="color:#003150;"
+          aria-label="Buka menu navigasi"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <i class="fas fa-bars text-lg"></i>
+        </button>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div
+        id="mobile-menu"
+        class="hidden lg:hidden px-4 py-3 border-t border-yellow-300"
+        style="background:#feb404;"
+        role="navigation"
+        aria-label="Navigasi mobile"
+      >
+        <a href="#hero"      class="block py-2.5 text-xs font-semibold text-primary hover:text-blue-800" data-i18n="nav.tentang">TENTANG KAMI</a>
+        <a href="#directory" class="block py-2.5 text-xs font-semibold text-primary hover:text-blue-800" data-i18n="nav.program">PROGRAM</a>
+        <a href="#hero"      class="block py-2.5 text-xs font-semibold text-primary hover:text-blue-800" data-i18n="nav.sdm">SDM</a>
+        <a href="#hero"      class="block py-2.5 text-xs font-semibold text-primary hover:text-blue-800" data-i18n="nav.fasilitas">FASILITAS</a>
+        <a href="#hero"      class="block py-2.5 text-xs font-semibold text-primary hover:text-blue-800" data-i18n="nav.agenda">KARYA &amp; AGENDA</a>
+        <a href="#cta"       class="block py-2.5 text-xs font-semibold text-primary hover:text-blue-800" data-i18n="nav.kontak">KONTAK</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Spacer untuk fixed navbar (60px top + 48px main nav = 108px) -->
+  <div style="height: 108px;" aria-hidden="true"></div>
+
+  <!-- ================================================
+       INFO TICKER — dua salinan teks untuk infinite scroll
+       ================================================ -->
+  <div class="ticker-wrapper" aria-label="Pengumuman beasiswa terbaru" role="marquee">
+    <!-- Badge block -->
+    <div class="ticker-badge-block">
+      <span class="ticker-badge" aria-hidden="true">INFO TERBARU</span>
+    </div>
+    <!-- Scroll area: inner wrapper berisi 2 copy teks, dianimasikan bersamaan -->
+    <div class="ticker-scroll-area">
+      <div class="ticker-inner" aria-live="off">
+        <span class="ticker-track">Selamat datang di antarmuka situs web Informatika terbaru! &nbsp;|&nbsp; Pendaftaran kolaborasi riset semester genap telah dibuka. &nbsp;|&nbsp; Pantau publikasi dosen dan mahasiswa secara real-time. &nbsp;|&nbsp; Beasiswa KIP Kuliah 2026 dibuka — Daftar sekarang! &nbsp;|&nbsp; Beasiswa LPDP S2 tersedia hingga September 2026. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        <span class="ticker-track" aria-hidden="true">Selamat datang di antarmuka situs web Informatika terbaru! &nbsp;|&nbsp; Pendaftaran kolaborasi riset semester genap telah dibuka. &nbsp;|&nbsp; Pantau publikasi dosen dan mahasiswa secara real-time. &nbsp;|&nbsp; Beasiswa KIP Kuliah 2026 dibuka — Daftar sekarang! &nbsp;|&nbsp; Beasiswa LPDP S2 tersedia hingga September 2026. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ================================================
+       HERO SECTION (#hero)
+       ================================================ -->
+  <section id="hero" class="hero-section" aria-label="Header halaman beasiswa">
+    <div class="hero-bg"></div>
+
+    <div class="hero-content max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+      <!-- Breadcrumb -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="#" data-i18n="breadcrumb.home">Beranda</a>
+        <span class="sep"><i class="fas fa-chevron-right" style="font-size:7px;"></i></span>
+        <a href="#" data-i18n="breadcrumb.profile">Pendidikan</a>
+        <span class="sep"><i class="fas fa-chevron-right" style="font-size:7px;"></i></span>
+        <span class="current" data-i18n="breadcrumb.scholarship">Beasiswa</span>
+      </nav>
+
+      <div class="grid lg:grid-cols-2 gap-10 lg:gap-20 items-center">
+
+        <!-- Left: Text Content -->
+        <div data-aos="fade-right" data-aos-duration="700">
+          <!-- Badge (outline style seperti Figma) -->
+          <div class="hero-badge">
+            <span data-i18n="hero.badge">PROGRAM BEASISWA</span>
+          </div>
+
+          <!-- H1 -->
+          <h1 class="hero-title" data-i18n="hero.title">
+            Beasiswa Studi &amp;<br>Penelitian
+          </h1>
+
+          <!-- Subtitle -->
+          <p class="hero-subtitle" data-i18n="hero.subtitle">
+            Teknik Informatika Universitas Tanjungpura
+          </p>
+
+          <!-- Description (sesuai teks Figma) -->
+          <p class="hero-desc" data-i18n="hero.desc">
+            Beasiswa adalah program keuangan yang disediakan untuk membantu mahasiswa yang membutuhkan dalam menyelesaikan studi mereka. Beasiswa ini dapat diberikan berdasarkan kriteria akademik, kebutuhan finansial, atau prestasi di luar kelas.
+          </p>
+
+          <!-- CTA Button (kuning, teks gelap — sesuai Figma) -->
+          <a href="#directory" class="hero-cta" aria-label="Lihat daftar beasiswa">
+            <span data-i18n="hero.cta">Lihat Daftar Beasiswa</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <!-- Right: Hero Image -->
+        <div class="hidden lg:block" data-aos="fade-left" data-aos-delay="150" data-aos-duration="700">
+          <div class="hero-image-wrap">
+            <img
+              src="assets/images/hero/mahasiswa.png"
+              alt="Mahasiswa Informatika UNTAN berprestasi"
+              width="480"
+              height="400"
+              onerror="this.src='https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=500&q=80'"
+            >
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ================================================
+       STATISTIK COUNTER (#statistics)
+       ================================================ -->
+  <section id="statistics" class="stats-section" aria-label="Statistik penerima beasiswa">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-3 divide-x divide-white/20">
+
+        <!-- Total Penerima -->
+        <div class="stat-item" data-aos="fade-up" data-aos-delay="0">
+          <div class="stat-number" data-counter="20" id="ctr-total">0</div>
+          <div class="stat-label" data-i18n="stats.total">
+            Total Mahasiswa Penerima<br>Beasiswa Semester Ini
+          </div>
+        </div>
+
+        <!-- Pemerintah -->
+        <div class="stat-item" data-aos="fade-up" data-aos-delay="100">
+          <div class="stat-number" data-counter="12" id="ctr-gov">0</div>
+          <div class="stat-label" data-i18n="stats.gov">
+            Total Penerima Beasiswa<br>Pembiayaan Pemerintah
+          </div>
+        </div>
+
+        <!-- Swasta -->
+        <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
+          <div class="stat-number" data-counter="8" id="ctr-pvt">0</div>
+          <div class="stat-label" data-i18n="stats.private">
+            Total Penerima Beasiswa<br>Pembiayaan Swasta
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ================================================
+       DIREKTORI BEASISWA (#directory)
+       ================================================ -->
+  <section id="directory" class="py-16 bg-white" aria-label="Direktori beasiswa">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- Section Header -->
+      <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6 mb-10">
+        <div data-aos="fade-right">
+          <!-- Label Badge "DAFTAR LENGKAP" -->
+          <div class="section-badge mb-3">
+            <span data-i18n="dir.label">DAFTAR LENGKAP</span>
+          </div>
+          <h2 class="section-title" data-i18n="dir.title">Daftar Beasiswa</h2>
+          <p class="section-desc" data-i18n="dir.desc">
+            Universitas menawarkan berbagai program bantuan keuangan untuk mahasiswa. Program ini berdasarkan prestasi akademik, kebutuhan finansial, atau prestasi di luar akademik.
+          </p>
+        </div>
+        <div class="flex-shrink-0 mt-2" data-aos="fade-left">
+          <!-- Button "Buku Panduan Beasiswa" -->
+          <a href="#" class="btn-panduan" aria-label="Unduh Buku Panduan Beasiswa">
+            <i class="far fa-file-alt"></i>
+            <span data-i18n="dir.guide">Buku Panduan Beasiswa</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Filter & Search Row (UC-02, UC-03) -->
+      <div class="flex flex-col lg:flex-row gap-4 mb-8" data-aos="fade-up" data-aos-delay="50">
+        <!-- Filter Tabs -->
+        <div class="filter-tabs flex-1" id="filter-tabs" role="tablist" aria-label="Filter beasiswa">
+          <button class="filter-tab active" data-filter="semua"     role="tab" aria-selected="true"  data-i18n="filter.all">Semua</button>
+          <button class="filter-tab"        data-filter="Buka"      role="tab" aria-selected="false" data-i18n="filter.open">Sedang Buka</button>
+          <button class="filter-tab"        data-filter="Ditutup"   role="tab" aria-selected="false" data-i18n="filter.closed">Ditutup</button>
+          <button class="filter-tab"        data-filter="Pemerintah"role="tab" aria-selected="false" data-i18n="filter.gov">Pemerintah</button>
+          <button class="filter-tab"        data-filter="Swasta"    role="tab" aria-selected="false" data-i18n="filter.private">Swasta</button>
+        </div>
+
+        <!-- Real-Time Search & Sort -->
+        <div class="flex flex-col sm:flex-row gap-3 flex-shrink-0">
+          <div class="search-wrapper w-full sm:w-64">
+            <i class="fas fa-search search-icon" aria-hidden="true"></i>
+            <input
+              type="search"
+              id="search-input"
+              class="search-input"
+              placeholder="Cari beasiswa..."
+              data-i18n-placeholder="search.placeholder"
+              aria-label="Cari beasiswa"
+              autocomplete="off"
+            />
+          </div>
+          <!-- Sort Button (Mockup) -->
+          <button class="btn-sort" aria-label="Urutkan beasiswa">
+            <i class="fas fa-bars"></i>
+            <span data-i18n="filter.sort">Urutkan berdasarkan</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Cards Grid (rendered by filter.js) -->
+      <div
+        id="beasiswa-grid"
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+        role="list"
+        aria-label="Daftar kartu beasiswa"
+      >
+        <!-- Skeleton loading state -->
+        <div class="col-span-full flex flex-col items-center justify-center py-20 text-gray-300">
+          <i class="fas fa-spinner fa-spin text-4xl mb-4"></i>
+          <p class="text-sm font-medium">Memuat data beasiswa...</p>
+        </div>
+      </div>
+
+      <!-- Pagination (rendered by filter.js) -->
+      <div
+        id="pagination"
+        class="pagination-container"
+        role="navigation"
+        aria-label="Navigasi halaman beasiswa"
+      ></div>
+
+    </div>
+  </section>
+
+
+  <!-- ================================================
+       POPUP MODAL DETAIL BEASISWA (UC-04, UC-05)
+       ================================================ -->
+  <div
+    id="popup-overlay"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="popup-title"
+  >
+    <!-- Backdrop (klik untuk tutup - UC-04) -->
+    <div id="popup-backdrop" class="popup-backdrop"></div>
+
+    <!-- Modal Card -->
+    <div id="popup-modal" class="popup-modal" tabindex="-1">
+      <!-- Close Button (×) -->
+      <button
+        id="popup-close"
+        class="popup-close"
+        aria-label="Tutup detail beasiswa"
+      >
+        <i class="fas fa-times"></i>
+      </button>
+
+      <!-- Content (rendered by popup.js) -->
+      <div id="popup-content"></div>
+    </div>
+  </div>
+
+
+  <!-- ================================================
+       POPUP MODAL HUBUNGI KAMI
+       ================================================ -->
+  <div
+    id="contact-overlay"
+    class="fixed inset-0 z-[2000] hidden items-center justify-center p-4 transition-opacity duration-300 opacity-0"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="contact-title"
+  >
+    <!-- Backdrop -->
+    <div id="contact-backdrop" class="absolute inset-0 bg-black/60 backdrop-blur-sm cursor-pointer"></div>
+
+    <!-- Modal Card -->
+    <div class="relative w-full max-w-2xl bg-white rounded-2xl shadow-2xl overflow-hidden flex flex-col transform transition-transform duration-300 scale-95" id="contact-modal">
+      
+      <!-- Header -->
+      <div class="bg-[#003150] px-6 py-4 flex items-center justify-between">
+        <h3 id="contact-title" class="text-white font-bold font-serif m-0 text-lg">Hubungi Kami</h3>
+        <button id="contact-close" class="text-white/70 hover:text-white transition-colors bg-transparent border-none cursor-pointer p-0" style="background: transparent; border: none; outline: none;" aria-label="Tutup">
+          <i class="fas fa-times text-xl"></i>
+        </button>
+      </div>
+
+      <!-- Body -->
+      <div class="p-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+          
+          <!-- Card Admin WhatsApp -->
+          <div class="bg-white border border-gray-100 rounded-xl p-6 text-center shadow-[0_4px_20px_rgba(0,0,0,0.04)] hover:shadow-[0_10px_30px_rgba(34,197,94,0.12)] transition-shadow">
+            <div class="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4 text-green-500 text-2xl">
+              <i class="fab fa-whatsapp"></i>
+            </div>
+            <h4 class="font-bold text-gray-900 mb-1">Admin Beasiswa</h4>
+            <p class="text-xs text-gray-500 mb-6">Senin - Jumat | 08.00 - 15.00 WIB</p>
+            <a href="https://wa.me/628115719999" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center w-full py-2.5 px-4 bg-[#25D366] hover:bg-[#1ebd57] text-white text-sm font-semibold rounded-lg transition-colors gap-2">
+              Chat Whatsapp <i class="fas fa-arrow-right text-xs"></i>
+            </a>
+          </div>
+
+          <!-- Card Instagram -->
+          <div class="bg-white border border-gray-100 rounded-xl p-6 text-center shadow-[0_4px_20px_rgba(0,0,0,0.04)] hover:shadow-[0_10px_30px_rgba(236,72,153,0.12)] transition-shadow">
+            <div class="w-14 h-14 bg-pink-100 rounded-full flex items-center justify-center mx-auto mb-4 text-pink-500 text-2xl">
+              <i class="fab fa-instagram"></i>
+            </div>
+            <h4 class="font-bold text-gray-900 mb-1">@kemahasiswaan.untan</h4>
+            <p class="text-xs text-gray-500 mb-6">Informasi Beasiswa Terkini</p>
+            <a href="https://instagram.com/kemahasiswaan.untan" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center w-full py-2.5 px-4 bg-gradient-to-r from-[#833AB4] via-[#FD1D1D] to-[#F56040] hover:opacity-90 text-white text-sm font-semibold rounded-lg transition-colors gap-2">
+              Buka Instagram <i class="fas fa-arrow-right text-xs"></i>
+            </a>
+          </div>
+
+        </div>
+        
+        <p class="text-center text-[10px] text-gray-400 m-0">*Pastikan WhatsApp Kamu aktif sebelum menghubungi admin.</p>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ================================================
+       TESTIMONI (#testimonial) — UC-07
+       ================================================ -->
+  <section id="testimonial" class="testimonials-section" aria-label="Testimoni penerima beasiswa">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- Header -->
+      <div class="text-center mb-12" data-aos="fade-up">
+        <h2 class="section-title text-center" data-i18n="testimonial.title">Apa Kata Mereka?</h2>
+        <p class="section-desc mx-auto text-center" data-i18n="testimonial.desc">
+          Cerita nyata dari mahasiswa yang telah meraih beasiswa
+        </p>
+      </div>
+
+      <!-- Swiper Carousel -->
+      <div class="swiper testimonial-swiper" data-aos="fade-up" data-aos-delay="100">
+        <div class="swiper-wrapper pb-14" id="testimonial-wrapper">
+          <!-- Rendered by carousel.js -->
+        </div>
+        <div class="swiper-pagination testimonial-pagination"></div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ================================================
+       CTA SECTION (#cta) — UC-06
+       ================================================ -->
+  <section id="cta" class="cta-section" aria-label="Hubungi admin beasiswa">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="cta-card" data-aos="zoom-in" data-aos-duration="600">
+        <h2 class="cta-title" data-i18n="cta.title">
+          Ingin Mengetahui Info Lebih Lanjut?
+        </h2>
+        <p class="cta-desc" data-i18n="cta.desc">
+          Bersama kami membangun sumber daya manusia unggul melalui program beasiswa dan kolaborasi riset
+        </p>
+        <div class="cta-buttons">
+          <!-- Scroll ke direktori -->
+          <a href="#directory" class="cta-btn-primary" aria-label="Lihat daftar beasiswa">
+            <span data-i18n="cta.btn1">Daftar Beasiswa</span>
+          </a>
+          <!-- Kontak CTA -->
+          <button
+            id="btn-open-contact"
+            class="cta-btn-secondary"
+            aria-label="Hubungi admin"
+          >
+            <span data-i18n="cta.btn2">Hubungi Kami</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ================================================
+       FOOTER (#footer)
+       ================================================ -->
+  <footer id="footer" class="site-footer" role="contentinfo">
+    <div class="footer-top">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- FOLLOW US -->
+        <h3 class="footer-follow-title">FOLLOW US</h3>
+
+        <!-- Social Media Icons -->
+        <div class="social-icons">
+          <a href="#" class="social-icon" aria-label="Instagram Informatika UNTAN"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-icon" aria-label="YouTube Informatika UNTAN"><i class="fab fa-youtube"></i></a>
+          <a href="#" class="social-icon" aria-label="Facebook Informatika UNTAN"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-icon" aria-label="X (Twitter) Informatika UNTAN"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="social-icon" aria-label="LinkedIn Informatika UNTAN"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" class="social-icon" aria-label="TikTok Informatika UNTAN"><i class="fab fa-tiktok"></i></a>
+        </div>
+
+        <!-- Logo & Info -->
+        <div class="footer-logo">
+          <div class="w-14 h-14 flex items-center justify-center flex-shrink-0">
+            <img src="assets/images/logo/logo-untan.png" alt="Logo UNTAN" class="w-full h-full object-contain">
+          </div>
+          <div class="footer-logo-text">
+            <div class="name">INFORMATIKA</div>
+            <div class="sub">UNIVERSITAS TANJUNGPURA</div>
+          </div>
+        </div>
+
+        <!-- Address & Contact -->
+        <address class="footer-address not-italic">
+          <p class="address-main">
+            <i class="fas fa-map-marker-alt"></i>
+            Jl. Prof. Dr. H. Hadari Nawawi, Bansir Laut, Kec. Pontianak Tenggara,<br>Kota Pontianak, Kalimantan Barat 78124
+          </p>
+          <p class="address-contact">
+            E: info@informatika.untan.ac.id &nbsp;|&nbsp; P: +62 851-7165-5161 &nbsp;|&nbsp; F: +62(561) 739637 &nbsp;|&nbsp; WA: +62 851-7165-5161
+          </p>
+        </address>
+
+      </div>
+    </div>
+
+    <!-- Pontianak Illustration (Dekorasi) -->
+    <div style="overflow:hidden;max-height:180px;">
+      <img
+        src="assets/images/hero/pontianak-illustration.png?v=2"
+        alt="Ilustrasi Kota Pontianak"
+        class="footer-illustration"
+        loading="lazy"
+        onerror="this.style.display='none'"
+      >
+    </div>
+  </footer>
+
+
+  <!-- ================================================
+       BACK TO TOP BUTTON
+       ================================================ -->
+  <button
+    id="back-to-top"
+    class="fixed bottom-6 right-6 z-50 w-11 h-11 rounded-full bg-primary text-white shadow-lg flex items-center justify-center transition-all duration-300 opacity-0 pointer-events-none hover:bg-blue-800 hover:-translate-y-1"
+    aria-label="Kembali ke atas"
+  >
+    <i class="fas fa-chevron-up text-sm"></i>
+  </button>
+
+
+  <!-- ================================================
+       SCRIPTS — urutan: libraries → modules → main
+       ================================================ -->
+
+  <!-- AOS.js -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+  <!-- Swiper.js -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- App Modules (order matters) -->
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/counter.js"></script>
+  <script src="assets/js/popup.js"></script>
+  <script src="assets/js/filter.js"></script>
+  <script src="assets/js/carousel.js"></script>
+  <script src="assets/js/main.js"></script>
+
+</body>
+</html>
